@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+
+import sys
+
+from bad_joker.bad_joker import bad_joker
+
+bad_joker(sys.argv[1])

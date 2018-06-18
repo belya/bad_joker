@@ -1,5 +1,5 @@
 import unittest
-from bad_joker import bad_joker, _generate_joke, _generate_default_joke
+from bad_joker.bad_joker import bad_joker, _generate_joke, _generate_default_joke
 from unittest.mock import patch, MagicMock
 import os
 
@@ -16,7 +16,7 @@ class BadJokerTestCase(unittest.TestCase):
     test_messages_mock = MagicMock()
     test_joke_mock =  MagicMock(return_value="test joke")
     with patch('telegram_send.send', test_messages_mock), \
-         patch('bad_joker._generate_default_joke', test_joke_mock):
+         patch('bad_joker.bad_joker._generate_default_joke', test_joke_mock):
       bad_joker("echo test")
       test_joke_mock.assert_called_with()
       test_messages_mock.assert_called_with(["test joke"])
@@ -27,7 +27,7 @@ class BadJokerTestCase(unittest.TestCase):
     with open("/tmp/test_exception.py", "w") as f:
       f.write("raise Exception('I am down')")
     with patch('telegram_send.send', test_messages_mock), \
-         patch("bad_joker._generate_joke", test_joke_mock):
+         patch("bad_joker.bad_joker._generate_joke", test_joke_mock):
       bad_joker("python3 /tmp/test_exception.py")
       assert "Traceback" in test_joke_mock.call_args[0][0]
       test_messages_mock.assert_called_with(["joke"])
