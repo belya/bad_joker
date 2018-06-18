@@ -20,11 +20,23 @@ def bad_joker(process_string):
 
 BAD_PUNS = [
 """
-  - Knock-knock! 
-  - Who's there?
-  - Trace
-  - Trace who?
-  - {}
+- Knock-knock! 
+- Who's there?
+- Trace
+- Trace who?
+- {}
+""",
+"""
+Why does developer throw a laptop out the window?
+Because of {}.
+""",
+"""
+Your program is the best spy in the world 'cause it takes her {}
+""",
+"""
+What's the difference between python and king cobra?
+King cobra makes you feel bad with her sharp teeth full of poison
+Python makes you feel bad with {}
 """
 ]
 
