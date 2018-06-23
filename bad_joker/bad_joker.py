@@ -37,10 +37,16 @@ Your program is the best spy in the world 'cause it takes her {}
 What's the difference between python and king cobra?
 King cobra makes you feel bad with her sharp teeth full of poison
 Python makes you feel bad with {}
+""",
+"""
+Three main sentences in each person's life:
+- I love you!
+- It's a boy.
+- {}
 """
 ]
 
 NO_PUN = """
-  Correct python script walked into a bar, and... 
-  Sh*t, I can't joke about correct python scripts :(
+Correct python script walked into a bar, and... 
+Sh*t, I can't joke about correct python scripts :(
 """
